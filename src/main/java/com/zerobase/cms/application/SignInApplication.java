@@ -21,5 +21,6 @@ public class SignInApplication {
                 .orElseThrow(() -> new CustomException(LOGIN_CHECK_FAIL));
         // 2. 토큰 발행
         // 3. 토큰 response
+        return null;
     }
 }
