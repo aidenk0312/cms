@@ -1,7 +1,6 @@
 package com.zerobase.cms.controller;
 
-import com.zerobase.cms.service.test.EmailSendService;
-import feign.Response;
+import com.zerobase.cms.service.EmailSendService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
