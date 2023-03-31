@@ -30,6 +30,7 @@ dependencies {
 	implementation 'io.springfox:springfox-boot-starter:3.0.0'
 	implementation 'org.springframework.data:spring-data-envers'
 	implementation 'mysql:mysql-connector-java'
+	implementation 'org.apache.commons:commons-lang3:3.11'
 
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
