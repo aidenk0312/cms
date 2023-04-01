@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증(고객)
-GET http://localhost:8080/signup/customer/verify/?email=kys1064@naver.com&code=ulx1tDOWPw
+GET http://localhost:8080/signup/customer/verify/?email=kys1064@naver.com&code=S5tjMrqzeN
 
 ###로그인 (고객)
 POST http://localhost:8080/signIn/customer
@@ -25,12 +25,12 @@ Content-Type: application/json
 ### 회원 정보 조회(고객)
 GET http://localhost:8080//customer/getInfo
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5czVwdFM2aGRWYm1nVjlLbStjPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTQ1MDUsImV4cCI6MTY4MDQ0MDkwNX0.gdVm0i_myeRvJS1j05Pa_ujRCbaToTw-MCZsIMS2g7c
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5czVwdFM2aGRWYm1nVjlLbStjPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTYzNTcsImV4cCI6MTY4MDQ0Mjc1N30.EYyStxjtbGSYi-tsi_i7_RUnXazTYVZ3sDbwPztXub4
 
 ### 잔액 변경(고객)
 POST http://localhost:8080/customer/balance
 Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5czVwdFM2aGRWYm1nVjlLbStjPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTQ1MDUsImV4cCI6MTY4MDQ0MDkwNX0.gdVm0i_myeRvJS1j05Pa_ujRCbaToTw-MCZsIMS2g7c
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5czVwdFM2aGRWYm1nVjlLbStjPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTYzNTcsImV4cCI6MTY4MDQ0Mjc1N30.EYyStxjtbGSYi-tsi_i7_RUnXazTYVZ3sDbwPztXub4
 
 {
   "from": "server",
@@ -52,7 +52,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증(셀러)
-GET http://localhost:8080/signup/seller/verify/?email=kys1064@naver.com&code=plLLT4TtEp
+GET http://localhost:8080/signup/seller/verify/?email=kys1064@naver.com&code=eMI3sr8Dxi
 
 ###로그인 (셀러)
 POST http://localhost:8080/signIn/seller
