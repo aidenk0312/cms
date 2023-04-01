@@ -1,0 +1,64 @@
+### 회원 가입(고객)
+POST http://localhost:8080/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1997-02-11",
+  "email": "kys1064@naver.com",
+  "name": "YS",
+  "password": "pw",
+  "phone": "01000000000"
+}
+
+### 이메일 인증(고객)
+GET http://localhost:8080/signup/customer/verify/?email=kys1064@naver.com&code=S5tjMrqzeN
+
+###로그인 (고객)
+POST http://localhost:8080/signIn/customer
+Content-Type: application/json
+
+{
+  "email": "kys1064@naver.com",
+  "password": "pw"
+}
+
+### 회원 정보 조회(고객)
+GET http://localhost:8080//customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5czVwdFM2aGRWYm1nVjlLbStjPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTYzNTcsImV4cCI6MTY4MDQ0Mjc1N30.EYyStxjtbGSYi-tsi_i7_RUnXazTYVZ3sDbwPztXub4
+
+### 잔액 변경(고객)
+POST http://localhost:8080/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5czVwdFM2aGRWYm1nVjlLbStjPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTYzNTcsImV4cCI6MTY4MDQ0Mjc1N30.EYyStxjtbGSYi-tsi_i7_RUnXazTYVZ3sDbwPztXub4
+
+{
+  "from": "server",
+  "message": "충전",
+  "money": 50000
+}
+
+
+### 회원가입(셀러)
+POST http://localhost:8080/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1997-02-11",
+  "email": "kys1064@naver.com",
+  "name": "YS",
+  "password": "pw",
+  "phone": "01000000000"
+}
+
+### 이메일 인증(셀러)
+GET http://localhost:8080/signup/seller/verify/?email=kys1064@naver.com&code=VX3ECO0kT4
+
+###로그인 (셀러)
+POST http://localhost:8080/signIn/seller
+Content-Type: application/json
+
+{
+  "email": "kys1064@naver.com",
+  "password": "pw"
+}
