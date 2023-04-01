@@ -17,7 +17,7 @@ public class JwtAuthenticationProvider {
 
     private long tokenValidTime = 1000L * 60 * 60 * 24;
 
-    private String createToken(String userPk, Long id, UserType userType) {
+    public String createToken(String userPk, Long id, UserType userType) {
         Claims claims = Jwts.claims().setSubject(Aes256Util.encrypt(userPk)).setId(Aes256Util.encrypt(id.toString()));
         claims.put("roles", userType);
         Date now = new Date();
