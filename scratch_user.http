@@ -52,7 +52,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증(셀러)
-GET http://localhost:8080/signup/seller/verify/?email=kys1064@naver.com&code=eMI3sr8Dxi
+GET http://localhost:8080/signup/seller/verify/?email=kys1064@naver.com&code=VX3ECO0kT4
 
 ###로그인 (셀러)
 POST http://localhost:8080/signIn/seller
