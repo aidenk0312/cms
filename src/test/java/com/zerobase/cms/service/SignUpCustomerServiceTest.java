@@ -2,10 +2,10 @@ package com.zerobase.cms.service;
 
 import com.zerobase.cms.domain.SignUpForm;
 import com.zerobase.cms.domain.model.Customer;
+import com.zerobase.cms.service.customer.SignUpCustomerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 
 import java.time.LocalDate;
 

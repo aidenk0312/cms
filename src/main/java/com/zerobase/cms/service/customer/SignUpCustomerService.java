@@ -1,10 +1,9 @@
-package com.zerobase.cms.service;
+package com.zerobase.cms.service.customer;
 
 import com.zerobase.cms.domain.SignUpForm;
 import com.zerobase.cms.domain.model.Customer;
 import com.zerobase.cms.domain.repository.CustomerRepository;
 import com.zerobase.cms.excepition.CustomException;
-import com.zerobase.cms.excepition.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -57,6 +56,5 @@ public class SignUpCustomerService {
             return customer.getVerifyExpiredAt();
         }
         throw new CustomException(NOT_FOUND_USER);
-
     }
 }

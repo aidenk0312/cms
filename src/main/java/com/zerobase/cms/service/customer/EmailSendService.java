@@ -1,4 +1,4 @@
-package com.zerobase.cms.service;
+package com.zerobase.cms.service.customer;
 
 import com.zerobase.cms.client.MailgunClient;
 import com.zerobase.cms.client.mailgun.SendMailForm;
@@ -7,8 +7,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import java.util.Base64;
 
 @Service
 public class EmailSendService {
