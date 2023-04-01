@@ -38,8 +38,27 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5c
   "money": 50000
 }
 
-#############################
 
 ### 회원가입(셀러)
+POST http://localhost:8080/signup/seller
+Content-Type: application/json
 
-### 로그인(셀러)
+{
+  "birth": "1997-02-11",
+  "email": "kys1064@naver.com",
+  "name": "YS",
+  "password": "pw",
+  "phone": "01000000000"
+}
+
+### 이메일 인증(셀러)
+GET http://localhost:8080/signup/seller/verify/?email=kys1064@naver.com&code=plLLT4TtEp
+
+###로그인 (셀러)
+POST http://localhost:8080/signIn/seller
+Content-Type: application/json
+
+{
+  "email": "kys1064@naver.com",
+  "password": "pw"
+}
