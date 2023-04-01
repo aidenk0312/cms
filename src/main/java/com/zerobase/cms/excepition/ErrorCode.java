@@ -15,7 +15,9 @@ public enum ErrorCode {
     // Login
     LOGIN_CHECK_FAIL(HttpStatus.BAD_REQUEST, "아이디나 패스워드를 확인해주세요."),
 
-    ALREADY_VERIFY(HttpStatus.BAD_REQUEST, "이미 인증이 완료 되었습니다.");
+    ALREADY_VERIFY(HttpStatus.BAD_REQUEST, "이미 인증이 완료 되었습니다."),
+
+    NOT_ENOUGH_BALANCE(HttpStatus.BAD_REQUEST, "잔액이 부족합니다.");
 
     private final HttpStatus httpStatus;
     private final String detail;
