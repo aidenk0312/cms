@@ -75,7 +75,7 @@ public class SignUpApplication {
     private String getVerificationEmailBody(String emil, String name, String type, String code) {
         StringBuilder builder = new StringBuilder();
         return builder.append(name).append("인증을 위해 링크를 클릭해주세요.\n\n")
-                .append("http://localhost:3306/signup/"+type+"/verify/?email=")
+                .append("http://localhost:8080/signup/"+type+"/verify/?email=")
                 .append(emil)
                 .append("&code=")
                 .append(code).toString();
