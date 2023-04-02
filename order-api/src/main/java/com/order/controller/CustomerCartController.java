@@ -1,6 +1,7 @@
 package com.order.controller;
 
 import com.order.Application.CartApplication;
+import com.order.Application.OrderCartApplication;
 import com.order.domain.product.AddProductCartForm;
 import com.order.domain.redis.Cart;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerCartController {
 
     private final CartApplication cartApplication;
+    private final OrderCartApplication orderCartApplication;
     private final JwtAuthenticationProvider provider;
 
     @PostMapping
@@ -35,5 +37,13 @@ public class CustomerCartController {
             @RequestHeader(name = "X-AUTH-TOKEN") String token,
             @RequestBody Cart cart) {
         return ResponseEntity.ok(cartApplication.updateCart(provider.getUserVo(token).getId(), cart));
+    }
+
+    @PostMapping("/order")
+    public ResponseEntity<Void> order(
+            @RequestHeader(name = "X-AUTH-TOKEN") String token,
+            @RequestBody Cart cart) {
+            orderCartApplication.order(token, cart);
+        return ResponseEntity.ok().build();
     }
 }
