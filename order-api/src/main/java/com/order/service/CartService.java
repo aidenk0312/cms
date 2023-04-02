@@ -2,13 +2,11 @@ package com.order.service;
 
 import com.order.client.RedisClient;
 import com.order.domain.product.AddProductCartForm;
-import com.order.domain.product.AddProductForm;
 import com.order.domain.redis.Cart;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -20,9 +18,15 @@ import java.util.stream.Collectors;
 public class CartService {
 
     private final RedisClient redisClient;
-    
+
     public Cart getCart(Long customerId) {
-        return redisClient.get(customerId, Cart.class);
+        Cart cart = redisClient.get(customerId, Cart.class);
+        return cart != null ? cart : new Cart();
+    }
+
+    public Cart putCart(Long customerId, Cart cart) {
+        redisClient.put(customerId, cart);
+        return cart;
     }
 
     public Cart addCart(Long customerId, AddProductCartForm form) {

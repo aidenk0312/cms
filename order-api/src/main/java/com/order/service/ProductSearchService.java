@@ -26,6 +26,6 @@ public class ProductSearchService {
     }
 
     public List<Product> getListByProductIds(List<Long> productIds) {
-        return productRepository.findAllById(productIds);
+        return productRepository.findAllByIdIn(productIds);
     }
 }
