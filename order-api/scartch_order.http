@@ -91,3 +91,23 @@ Content-Type: application/json
 ### 상품 상세 검색
 GET http://localhost:8081/search/product/detail?productId=1
 Content-Type: application/json
+
+### 카트 추가
+POST http://localhost:8081/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyTTNMWDM3TTB2Uy82VXRTYlY2ZzZCWHM5czVwdFM2aGRWYm1nVjlLbStjPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMzY0MjgwLCJleHAiOjE2ODA0NTA2ODB9.10WwvOkaI0zb2aaj27WQDcOLauhhNpYTSIvoFO91chY
+
+{
+  "description": "상품설명",
+  "id": 1,
+  "items": [
+    {
+      "count": 1,
+      "id": 1,
+      "name": "270",
+      "price": 100000
+    }
+  ],
+  "name": "나이키 에어포스 한정판",
+  "sellerId": 1
+}
